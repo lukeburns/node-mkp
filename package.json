@@ -1,0 +1,43 @@
+{
+  "name": "mkp",
+  "version": "1.0.0",
+  "description": "Recursively make files and/or directories with brace expansion support",
+  "main": "mkp.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manidlou/node-mkp.git"
+  },
+  "keywords": [
+    "fs",
+    "mkdirp",
+    "mkpath",
+    "mk",
+    "mkp",
+    "mkfile",
+    "touch",
+    "mkdir"
+  ],
+  "author": "Mani Maghsoudlou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/manidlou/node-mkp/issues"
+  },
+  "homepage": "https://github.com/manidlou/node-mkp#readme",
+  "dependencies": {
+    "async": "^2.1.4",
+    "braces": "^2.0.3",
+    "is-glob": "^3.1.0",
+    "mkdirp": "^0.5.1",
+    "touch": "^1.0.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.5.4",
+    "standard": "^8.6.0",
+    "tap": "^9.0.3"
+  },
+  "scripts": {
+    "lint": "standard",
+    "unit": "tap test/*.js | tap-mocha-reporter spec",
+    "test": "npm run lint && npm run unit"
+  }
+}
