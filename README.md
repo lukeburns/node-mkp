@@ -1,9 +1,8 @@
 node-mkp
 ========
 
-[![npm Package](https://img.shields.io/npm/v/mkp.svg?style=flat-square)](https://www.npmjs.com/package/mkp)
-[![travis Build Status](https://travis-ci.org/manidlou/node-mkp.svg?branch=master)](https://travis-ci.org/manidlou/node-mkp)
-[![windows Build status](https://ci.appveyor.com/api/projects/status/braidfhgdf/branch/master?svg=true)](https://ci.appveyor.com/project/mawni/node-mkp/branch/master)
+[![npm](https://img.shields.io/npm/v/mkp.svg?style=flat-square)](https://www.npmjs.com/package/mkp)
+[![travis](https://travis-ci.org/manidlou/node-mkp.svg?branch=master)](https://travis-ci.org/manidlou/node-mkp)
 
 
 `mkp` (mk path) is a [node.js](https://nodejs.org) module that recursively creates paths, both directory and file with brace expansion support. It means, you can do stuff like `mkdir -p /some/dir/{foo,bar}/baz`, but in node.js!
@@ -30,7 +29,7 @@ Create files and/or dirs. `input` can be file, dir, things like `/some/foo-{1..3
 
 ### mkp.sync(input[, options])
 
-create files and dirs sync. `input` and `options` are the same as async version. It throws err if will find any.
+create files and dirs sync. `input` and `options` are the same as async version. It throws err if any found.
 
 ```js
 const mkp = require('mkp')

@@ -72,13 +72,13 @@ function _mkSync (inp, opts) {
       braces.expand(inp).forEach((xpath) => {
         _mkpathSync(xpath, opts)
       })
-      return
     } else {
       return _mkpathSync(inp, opts)
     }
   } catch (er) {
     throw er
   }
+  return
 }
 
 function mkp (inp, opts, cb) {
@@ -88,7 +88,10 @@ function mkp (inp, opts, cb) {
   }
 
   if (typeof inp === 'string') {
-    return _mk(inp, opts, cb)
+    _mk(inp, opts, (er) => {
+      if (er) return cb(er)
+      else return cb()
+    })
   }
 
   if (Array.isArray(inp) && inp.length > 0) {
