@@ -15,7 +15,9 @@
     "mkp",
     "mkfile",
     "touch",
-    "mkdir"
+    "mkdir",
+    "create file",
+    "create dir"
   ],
   "author": "Mani Maghsoudlou",
   "license": "MIT",
