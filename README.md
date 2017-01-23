@@ -17,7 +17,7 @@ Usage
 
 ### mkp(input[, options], cb)
 
-- `input` `{String | Array<String>}` a string or an array of strings of normal paths (file and dir) and/or [braces](https://github.com/jonschlinkert/braces#features) patterns.
+- `input` `{String | Array<String>}` string or an array of strings of normal paths (file and dir) and/or [braces](https://github.com/jonschlinkert/braces#features) patterns.
 - `options` `{Object}` *optional* (all options are `false` by default)
  - `noext` `{Boolean}`
    - the default behavior is if path doesn't have extname, it is created as a directory. If `{noext: true}` then paths without extname will be created as files and not dirs. It is basically used when you want to create file(s) without extname, like `/some/filenoext`.
