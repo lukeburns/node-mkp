@@ -177,14 +177,14 @@ mkp(files, (er) => {
 ```
 
 ```js
-var dirs = [
+var paths = [
   'some/nested/dir-{a,b,c}',
   'some/nested/file-{a,b,c}.js',
   'some/other/nested/dir',
   'some/other/nested/file.js'
 ]
 
-mkp(dirs, (er) => {
+mkp(paths, (er) => {
   if (er) console.error(er)
   else console.log('done!')
 })
