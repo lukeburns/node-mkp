@@ -1,6 +1,6 @@
 {
   "name": "mkp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Recursively make files and/or directories with brace expansion support",
   "main": "mkp.js",
   "repository": {
