@@ -25,7 +25,11 @@ function _mkfileSync (inp, opts) {
 function _mkpath (inp, opts, cb) {
   if (path.extname(inp) === '') {
     if (opts.noext) {
-      return _mkfile(inp, opts, cb)
+      if (inp[inp.length-1] === '/') {
+        return mkdirp(inp, opts, cb)
+      } else {
+        return _mkfile(inp, opts, cb)
+      }
     } else {
       return mkdirp(inp, opts, cb)
     }

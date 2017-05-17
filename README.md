@@ -20,7 +20,7 @@ Usage
 - `input` `{String | Array<String>}` string or an array of strings of normal paths (file and dir) and/or [braces](https://github.com/jonschlinkert/braces#features) patterns.
 - `options` `{Object}` *optional* (all options are `false` by default)
  - `noext` `{Boolean}`
-   - the default behavior is if path doesn't have extname, it is created as a directory. If `{noext: true}` then paths without extname will be created as files and not dirs. It is basically used when you want to create file(s) without extname, like `/some/filenoext`.
+   - the default behavior is if path doesn't have extname, it is created as a directory. If `{noext: true}` then paths without extname will be created as files and not dirs, unless the path ends with a slash. It is basically used when you want to create file(s) without extname, like `/some/filenoext`.
  - plus all [mkdirp](https://github.com/substack/node-mkdirp) and [touch](https://github.com/isaacs/node-touch) options.
 
 - return `cb(err)` with possible err or null.
@@ -158,6 +158,15 @@ mkp(file, {noext: true}, (er) => {
 })
 ```
 
+```js
+var dir = 'some/nested/dirnoext/'
+// if input ends in a slash, it will be made as a directory, even with {noext:true}
+mkp(dir, {noext: true}, (er) => {
+  if (er) console.error(er)
+  else console.log('done!')
+})
+```
+
 **_input is array_**
 
 ```js
@@ -194,4 +203,3 @@ License
 -------
 
 Licensed under MIT
-
